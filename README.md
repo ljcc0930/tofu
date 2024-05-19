@@ -69,10 +69,10 @@ The evaluation result will by default be dumped to `${model_path}/eval_results/d
 
 The evaluation results on four datasets (forget, retain, real_world, real_author) will be aggregated into one json file named `eval_log_aggregated.json`. Finally, you can run 
 ```
-python aggregate_eval_stat.py retain_result=${path_to_aggregated_retain_result} ckpt_result=${path_to_aggregated_retain_result} \
+python aggregate_eval_stat.py retain_result=${path_to_aggregated_retain_result} ckpt_result=${path_to_aggregated_skpt_result} \
  method_name=${method_name} save_file=${save_filename}
 ```
-to obtain an aggregated csv format result which contains the overall model utility and forget quality. Here the `${path_to_aggregated_retain_result}` and `${path_to_aggregated_retain_result}` are the path to your `eval_log_aggregated.json`. The retain results are uploaded in `data/`.
+to obtain an aggregated csv format result which contains the overall model utility and forget quality. Here the `${path_to_aggregated_retain_result}` and `${path_to_aggregated_skpt_result}` are the path to your `eval_log_aggregated.json`. The retain results are uploaded in `data/`, the `${path_to_aggregated_skpt_result}` should be found in the `${save_dir}` location which you specify during unlearning.
 
 
 ### Available forget sets are:
